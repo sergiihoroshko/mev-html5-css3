@@ -1,0 +1,49 @@
+/* :link - задает стили для не посещенной ссылки. */
+a:link {
+    color: #497DDD;
+}
+/* :visited - задает стили для ссылки, по которой уже выполнялся переход. */
+a:visited {
+    color: #EF7D55;
+}
+/* :hover - задает стили для элемента, когда на него наводят курсор. Действует не только для ссылок. */
+a:hover {
+    color: #154088;
+}
+/* :active - задает стили для ссылки на которой удерживается нажатый курсор. */
+a:active {
+    color: #497DDD;
+}
+/* empty */
+td {
+    border: 1px solid black;
+    width: 100px;
+}
+:empty {
+    background-color: firebrick;
+}
+/* :first-child */
+/* Псевдокласс :first-child устанавливает стилевое оформление к первому дочернему элементу своего родителя.  */
+h1:first-child {
+    background-color: #EF7D55;
+}
+/* Псевдокласс :first-child устанавливает стилевое оформление к последнему дочернему элементу своего родителя. CSS3. */
+p:last-child {
+    background-color: #497DDD;
+}
+/* :first-of-type */
+p:first-of-type {
+    background: red;
+}
+p:last-of-type {
+    background: green;
+}
+/* :not */
+span {
+    color: rebeccapurple;
+}
+/* Псевдокласс :not позволяет задать стили для элементов, которые не содержат указанный селектор. CSS3. */
+:not(span) {
+    padding: 10px;
+    margin: 5px;
+}

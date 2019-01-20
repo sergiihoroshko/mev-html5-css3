@@ -1,0 +1,67 @@
+.table {
+    width: 70%;
+    margin: auto;
+    /* Свойством border задаем границы таблице. */
+    border: 3px solid black;
+    /*
+    Свойство border-collapse пощволяет задать отображение границы вокруг ячеек таблицы.
+    Имеет несколько значений:
+        - collapse - рамки ячеек сливаются в одну, а промежутки между рамками убираются.
+        - separate - рамки ячеек располагаются отдельно.
+    */
+    border-collapse: separate;
+    /*
+    Свойство border-spacing позволяет задать отступы между ячейками и рамкой таблицы. 
+    Если задано одно значение - отступы со всех сторон одинаковые, если два значения, то первое задает расстояние по горизонтали, второе - по вертикали.
+    */
+    border-spacing: 5px;
+    /*
+    Свойство empty-cells позволяет задать параметры отображения пустых ячеек.
+    Имеет два значения:
+        - show - рамка и фон отображаются.
+        - hide - скрывает ячейку, задавая ей свойство display: none.
+    */
+    empty-cells: hide;
+}
+.table caption {
+    padding: 5px;
+    margin: 5px;
+}
+.table th {
+    padding: 5px;
+    /* Свойством border задаем границы заголавным ячейкам таблицы. */
+    border: 3px solid black;
+}
+.table td {
+    padding: 5px;
+    /* Свойством border задаем границы обычным ячейкам таблицы. */
+    border: 3px solid black;
+}
+/* example */
+.example {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    max-width: 70%;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 7px solid #9baff1;
+    border-bottom: 7px solid #9baff1;
+}
+.example th {
+    font-size: 13px;
+    font-weight: normal;
+    background: #e8edff;
+    border-right: 1px solid #9baff1;
+    border-left: 1px solid #9baff1;
+    color: #039;
+    padding: 8px;
+}
+.example td {
+    background: #e8edff;
+    border-right: 1px solid #aabcfe;
+    border-left: 1px solid #aabcfe;
+    color: #669;
+    padding: 8px;
+}

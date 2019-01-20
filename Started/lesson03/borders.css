@@ -1,0 +1,72 @@
+div {
+    width: 500px;
+    height: 250px;
+    background-color: dodgerblue;
+    border: 2px solid black;
+}
+.div-first {
+    width: 300px;
+    height: 150px;
+    background-color: lightgray;
+    border: 3px double blue;
+    /* Свойство border позволяет установить границу вокруг элемента.
+        Значение следует задавать в следующем порядке:
+            - border-width - толщина границы.
+            - border-style - стиль линии.
+                - dotted - точки
+                - dashed - пунктир
+                - solid - сплошная
+                - double - двойная
+                - groove - втиснутая
+                - ridge - выпуклая
+                - inset - внутрь
+                - outset - наружу
+            - border-color - цвет линии */
+    border-width: 3px;
+    border-style: ridge;
+    border-color: blueviolet;
+    text-align: left;
+    padding: 15px;
+}
+.div-second {
+    width: 800px;
+    height: 300px;
+    background-color: lightgray;
+    border-top: 5px solid blue;
+    border-bottom: 7px dashed green;
+    border-right: 10px dotted red;
+    border-left: 15px double black;
+    text-align: left;
+    padding: 15px;
+}
+.div-three {
+    width: 300px;
+    height: 150px;
+    background-color: greenyellow;
+    border: 30px solid #40c4c8;
+    border-image: url(images/background.jpg) 40 round round;
+}
+/* Свойство border-radius появилось в версии CSS3. Позволяет задавать радиус скругления углов, при этом, если рамка не задана        скругление происходит с фоном.
+    Допускается использовать от одного до 4-х значений:
+        - одно значение - задается радиус для всех углов.
+        - два значения - первое - верхний левый, правый нижний, второе - правый верхний, левый нижний.
+        - три значения - первое - радиут верхнего левого, второе - правый верхний, левый нижний, третье - правый нижний.
+        - четвертое значение - первое - левый верхний, дальше по часовой стрелке. */
+#id1 {
+    -moz-border-radius: 10px 50px 70px 100px;
+    -webkit-border-radius: 10px 50px 70px 100px;
+    border-radius: 10px 50px 70px 100px;
+}
+#id2 {
+    -moz-border-radius: 40px/20px;
+    -webkit-border-radius: 40px/20px;
+    border-radius: 40px/20px;
+}
+#outline {
+    outline: 10px solid rgb(69, 214, 202);
+}
+blockquote {
+    padding: 0 10px;
+    border-right: 3px dotted darkorange;
+    border-left: 3px dotted darkorange;
+}

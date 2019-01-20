@@ -1,0 +1,31 @@
+body {
+    font-size: 20px;
+}
+/* Псевдоэлемент after позволяет динамически генерировать контент и вставлять после содержимого элемента.*/
+h4::after {
+    /* Свойство content содержит значение которое необходимо динамически встаивть */
+    content: ' Wow!! It is works!;';
+}
+/* Псевдоэлемент before позволяет динамически генерировать контент и вставлять до содержимого элемента.*/
+h5::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: salmon;
+    margin-right: 7px;
+}
+/* Псевдоэлемент first-letter позволяет задать стиль первого символа в тексте элемента. CSS3. */
+p::first-letter {
+    font-size: 18px;
+    color: red;
+}
+/* Псевдоэлемент first-line позволяет задать стиль первой строки текста внутри элемента. CSS3 */
+p::first-line {
+    color: blue;
+}
+/* Псевдоэлемент selection позволяет задать стили к выделенному пользователем тексту. Допускается использовать следующие свойства: olor, background и background-color. */
+.select::selection {
+    background-color: black;
+    color: yellow;
+}

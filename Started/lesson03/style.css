@@ -1,0 +1,45 @@
+/* style on the element */
+p {
+    color: red;
+    background-color: chartreuse;
+}
+span {
+    color: green;
+    font-size: 20px;
+}
+/* class and id */
+.example {
+    background-color: red;
+}
+#example {
+    color: darkorange;
+}
+/* who is celebrity */
+#ident {
+    color: brown;
+}
+.class {
+    color: blue;
+}
+/* size only for example*/
+.height {
+    height: 100px;
+    background-color: coral;
+}
+.width {
+    width: 300px;
+}
+/* max-height */
+.mh {
+    max-height: 100px;
+    background-color: coral;
+}
+/* max-width */
+.mw {
+    max-width: 400px;
+}
+/* min-height */
+.minh {
+    min-height: 100px;
+    background-color: burlywood;
+}

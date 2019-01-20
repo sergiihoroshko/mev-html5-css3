@@ -1,0 +1,82 @@
+ul li {
+/*
+Свойство list-style-type позволяет задать вид маркера.
+Маркированный список:
+    - circle - маркер в виде кружка.
+    - disc   - маркер в виде точки.
+    - square - маркер в виде квадрата.
+*/
+    list-style-type: disc;
+}
+ol li {
+/*
+Нумерованный список:
+    - armenian              - традиционная армянская нумерация.
+    - decimal               - арабские числа (1, 2, 3, 4,...).
+    - decimal-leading-zero  - арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,...).
+    - georgian              - традиционная грузинская нумерация.
+    - lower-alpha           - строчные латинские буквы (a, b, c, d,...).
+    - lower-greek           - строчные греческие буквы (α, β, γ, δ,...).
+    - lower-latin           - это значение аналогично lower-alpha.
+    - lower-roman           - римские числа в нижнем регистре (i, ii, iii, iv, v,...).
+    - upper-alpha           - заглавные латинские буквы (A, B, C, D,...).
+    - upper-latin           - это значение аналогично upper-alpha.
+    - upper-roman           - римские числа в верхнем регистре (I, II, III, IV, V,...).
+    - none                  - отменяет маркеры для списка.
+*/
+    list-style-type: georgian;
+}
+li {
+/* Свойсто устанавливает адрес изображения, которое юудет применятся в качестве маркера к элементам списка. */
+    list-style-image: url(images/Computer.png);
+/* Свойсто определяет, как будет размещаться маркер относительно текста.
+Допустимо два значения:
+    - outside — маркер вынесен за границу элемента списка.
+    - inside — маркер обтекается текстом. */
+    list-style-position: inside;
+}
+.microsoft {
+/* Свойсто устанавливает адрес изображения, которое юудет применятся в качестве маркера к элементам списка. */
+    list-style-image: url(images/microsoft.png);
+}
+.apple {
+    list-style-image: url(images/apple.png);
+}
+.oracle {
+    list-style-image: url(images/oracle.png);
+}
+ul{
+    width: 300px;
+}
+.border {
+    list-style: none;
+    padding: 0;
+}
+
+.border li {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 10px solid #f05d22;
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1), -2px -2px 5px 0 rgba(0,0,0,.1), 2px 2px 5px 0 rgba(0,0,0,.1), -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+}
+
+.border li:nth-child(2) {
+    border-color: #8bc63e;
+}
+
+.border li:nth-child(3) {
+    border-color: #fcba30;
+}
+
+.border li:nth-child(4) {
+    border-color: #1ccfc9;
+}
+
+.border li:nth-child(5) {
+    border-color: #493224;
+}

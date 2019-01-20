@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables</title>
+</head>
+
+<body>
+    <!-- border attribute not supported in HTML5 standard -->
+    <table border="1">
+        <caption>This is table</caption>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>NaN</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Apple</td>
+                <td>33,2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Orange</td>
+                <td>5,32</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Banana</td>
+                <td>7,2</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <table border="1" width="800" height="200">
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+            <td rowspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

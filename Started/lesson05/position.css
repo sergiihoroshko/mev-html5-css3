@@ -1,0 +1,56 @@
+.outer {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    position: relative; /* absolute */
+    left: 100px;
+    top: 50px;
+}
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    top: 50px;
+    left: 40px;
+}
+.other-way {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+}
+body {
+    height: 1000px;
+}
+.fix {
+    width: 200px;
+    height: 250px;
+    background-color: plum;
+/* Фиксированное позиционироание позволяет закрепить элемент в указанном месте сраницы. Позиционирование такого элемента, происходит относительно окна браузера, и никогда не меняется. Сам элемент удаляется из основного потока документа и создаетсяв новом потоке документа */
+    position: fixed;
+    bottom: 0;
+    right: 100px;
+}
+.element1, .element2, .element3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+.element1{
+    background-color: red;
+    top: 10px;
+    /* Свойство позволяет указать позиионирование по оси Z. Эт полезно когда элемента при абсолютном или относительном позиционирвании не перекрывали друг друга. */
+    z-index: 10;
+}
+.element2{
+    background-color: green;
+    top: 20px;
+    left: 20px;
+    z-index:20;
+}
+.element3 {
+    background-color: yellow;
+    top: 30px;
+    left: 30px;
+    z-index: 
