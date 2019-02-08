@@ -1,0 +1,12 @@
+.date {
+    font-size: 1.5em;
+}
+.date ruby {
+    background: #006730;
+    color: #ffffff;
+}
+.date rt {
+    background: #a0dec0;
+    color: #000000;
+    padding: 2px;
+}

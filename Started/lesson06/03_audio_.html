@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Audio</title>
+</head>
+<body>
+<!-- Элемент используется для внедрения звукового контента на веб-страницу.
+Имеет следующие атрибуты:
+    - autoplay - автоматическое воспроизведение аудиофайла.
+    - controls - указывает, что нужно отобразить элементы управления воспроизведением.
+    - loop - циклическое воспроизведение аудиофайла.
+    - muted - выключить звук при воспроизведении.
+    - preload - предварительная загрузка контента. Некоторые браузеры игнорируют. Имеет следующие значения:
+    - auto - загружает файл полностью.
+    - metadata - загружается только небольшая часть файла, чтобы определить основные характеристики.
+    - none - отсутствие автоматической загрузки.
+    - src - содержит путь к аудиофайлу. -->
+    <audio src="audio/Vivaldi.mp3" autoplay>
+        Browser not support this audio
+    </audio>
+    <audio controls>
+            <!-- Элемент source используется для добавления нескольких медиа-ресурсов. 
+            Указывает на альтернитавные файлы, которые браузер может выбрать из предложенных на основании поддерживаемого им типа носителя или кодека. -->
+        <source src="audio/Vivaldi.mp3" />
+        <source src="audio/Vivaldi.ogg" />
+        Browser not support this audio
+    </audio>
+</body>
+</html>

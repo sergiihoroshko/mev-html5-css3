@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="new_tags.css">
+    <title>New tags</title>
+</head>
+<body>
+<!-- Тег <figure> позволяет добавить краткие характеристики к иллюстрациям, фотографиям, диаграммам, фрагментам кода и т.д.
+Является блочным элементом и занимает всю допустимую ширину блока. -->
+<figure>
+    <img src="images/background.jpg" alt="background">
+    <!-- figcaption - тег который содержит описание, по умолчанию высота равна 18px -->
+    <figcaption>
+        This is a background
+    </figcaption>
+</figure>
+<!-- Тег <details> используется для хранения информации, которую можно скрывать и отображать по требованию пользователя. -->
+<details>
+    <!-- Тег <summary> позволяет добавить заголовок, щелкая по которому будет виден контент тега <details>  -->
+    <summary>Show me more informations</summary>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, accusamus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, enim!</p>
+</details>
+<br />
+<!-- Тег time определяет время и дату. Текст в теге time не имеет стилевого оформления браузером.
+Имеет атрибут datetime, в котором указывается дата, время или оба значения. -->
+<time datetime="2019-02-08">8 February 2019</time>
+<p>
+    <time>February 2019</time> - date of create this page
+</p>
+<!-- Тег определяет область, в которую выаодится информация, преимущественно с помощью скриптов. HTML5 -->
+<output>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, numquam.
+</output>
+<form action="#" oninput="result.value=(cm.value/3.3).toFixed(3)">
+    <p>
+        Lorem ipsum dolor sit amet.
+        <input type="number" name="cm" autofocus>
+    </p>
+    <p>You JS calculation result is displayed here: <output name="result">0</output></p>
+</form>
+<br />
+<!-- Тег ruby предназначен для добавления небольшой аннотации сверху или снизу от заданного текста.
+Тег ruby выступает контейнером для тега rt, он формирует аннотацию к тексту. -->
+<ruby>
+    Lorem, ipsum.
+    <!-- Тег rp выводит текст в том случае, если браузеры не поддерживают тег ruby. -->
+    <rp>
+        if not support
+    </rp>
+    <rt>
+        Lorem, ipsum.
+    </rt>
+</ruby>
+<p class="date">
+    <ruby>
+        8<rt>February</rt>
+    </ruby>
+</p>
+</body>
+</html>
