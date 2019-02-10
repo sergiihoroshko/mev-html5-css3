@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Form with Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" class="form-control" placeholder="Email"
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" name="" id="password" class="form-control" placeholder="Password"
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address1">Address-1</label>
+                <input type="text" name="" id="address1" class="form-control" placeholder="Pushkina 100"
+                    aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Help text</small>
+            </div>
+            <div class="form-group">
+                <label for="address2">Address-2</label>
+                <input type="text" name="" id="address2" class="form-control" placeholder="Address-2"
+                    aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Help text</small>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" name="" id="city" class="form-control" placeholder="city"
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="state">State</label>
+                    <select name="state" id="state" class="form-control">
+                        <option value="" select disable>Choose</option>
+                        <option>Kiev</option>
+                        <option>Lviv</option>
+                        <option>Odessa</option>
+                        <option>Harkiv</option>
+                        <option>Dnipro</option>
+                        <option>Cherkasy</option>
+                        <option>Ternopil</option>
+                        <option>Frankifsk</option>
+                    </select>
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="zip">Zip</label>
+                    <input type="text" name="" id="zip" class="form-control" placeholder="18000"
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <label for="" class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="" id="check-form" class="form-control"
+                            placeholder="" aria-describedby="helpId"> Check me out
+                    </label>
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+</body>
+
+</html>
