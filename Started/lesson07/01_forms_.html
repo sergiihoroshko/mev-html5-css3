@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forms</title>
+</head>
+
+<body>
+    <!-- 
+Формы используются для ввода и отправки данных.
+Используются следующие атрибуты:
+    - method    - устанавливает метод отправки данных на сервер. Значение post указывает на необходимость передачи данных через специальные заголовки.
+    Значение get позволяет передать данные через строку запроса.
+    - action    - устанавливает адрес, на который передаются данные формы.
+    - enctype   - устанавливает тип передаваемых данных. Может принимать следующие значения:
+    - application/x-www-form-urlencoded     - кодировка отправляемых данных по умолчанию.
+    - multipart/form-data                   - кодировка применяется при отправке файлов.
+    - text/plain                            - кодировка применяется при отправке простой текстовой информации.
+    - autocomplete - атрибут указывает браузеру нужно ли запоминать вводимые пользователем значения. 
+-->
+    <form action="01_form_.html" method="POST" enctype="text/plain" autocomplete="on">
+
+    </form>
+    <!-- 
+Для создания текстового поля в форме, следует использовать элемент input с атрибутом type и значением text.
+Также элемент может иметь дополнительные атрибуты:
+    - maxlength     - максимально допустимое количество символов в текстовом поле.
+    - pattern       - определяет шаблон, которому должен соответствовать вводимый текст.
+    - placeholder   - устанавливает текст, который по умолчанию отображается в текстовом поле.
+    - readonly      - делает текстовое поле доступным только для чтения.
+    - required      - указывает, что текстовое поле обязательно должно иметь значение.
+    - size          - устанавливает ширину текстового поля в видимых символах.
+    - value         - устанавливает значение по умолчанию в текстовом поле. 
+-->
+    <form action="#" method="GET" enctype="text/plain">
+        <!-- Поле используется для ввода текстовых данных. -->
+        <input type="text" name="login" placeholder="Enter login" />
+        <!-- Поле используется для ввода пароля. Вводимые символы заменяются на точки. -->
+        <input type="password" name="password" placeholder="Enter password" />
+        <!-- input с типом submit отправляет данные на страницу, указанную в атрибуте action тега form -->
+        <input type="submit" value="Send">
+    </form>
+    <!-- Для создания описания полей используются элементы label.  Метка связывается с полем посредством атрибута id. -->
+    <form action="" method="post" enctype="text/plain">
+        <!-- атрибут accesskey позволяет установить комбинацию горячих клавиш, нажав на которые поле становится активным, то есть получает фокус. -->
+        <p>
+            <label for="login">Login</label>
+            <input type="text" name="login" id="login" />
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <!-- input с типом submit отправляет данные на страницу, указанную в атрибуте action тега form.
+        input с типом reset сбрасывает значение всех элементов формы в начальное состояние. -->
+        <p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Send">
+        </p>
+    </form>
+    <!-- Флажок представляет собой элемент, который может находиться в одном из двух состояний: отмеченном и неотмеченном. -->
+    <form action="" method="get">
+        <h3>Select courses for learn</h3>
+        <p>
+            <!-- Атрибут checked позволяет установить флажок в отмеченное состояние. -->
+            <input type="checkbox" checked name="html5" id="">
+            <label for="">HTML5&amp;CSS3</label>
+        </p>
+        <p>
+            <input type="checkbox" name="bootstrap" id="">
+            <label for="">Bootstrap 4</label>
+        </p>
+        <p>
+            <input type="checkbox" name="js" id="">
+            <label for="">JavaScript</label>
+        </p>
+        <p>
+            <input type="checkbox" name="angular2" id="">
+            <label for="">Angular 2</label>
+        </p>
+
+        <h3>Select time</h3>
+        <p>
+            <input type="radio" name="time" id="" value="morning">
+            <label for="">9:00 - 11:00</label>
+        </p>
+        <p>
+            <input type="radio" name="time" id="" value="dinner">
+            <label for="">11:30 - 13:30</label>
+        </p>
+        <p>
+            <input type="radio" name="time" id="" value="evening">
+            <label for="">17:30 - 19:30</label>
+        </p>
+        <p>
+            <button type="submit">Send</button>
+        </p>
+    </form>
+    <form action="" method="post">
+        <p>
+            <!-- 
+            Для отправки файла на сервер, у формы должен быть установлен атрибут enctype="multipart/form-data".
+            Атрибуты:
+                - accept    - устанавливает тип файлов, которые допустимы для выбора.
+                - multiple  - позволяет выбирать множество файлов.
+                - required  - требует обязательного выбора файла. 
+            -->
+            <input type="file" name="" id="" value="Chouse you file" multiple />
+        </p>
+        <p>
+            <!-- Скрытое поле, которое никак не отображается на странице. Предназначенно для хранения данных, которые не нужно отображать пользователю. -->
+            <input type="hidden" name="" value="secret value" />
+        </p>
+        <p>
+            <!-- Обычной кнопке можно задать обработчик с помощью JavaScript. -->
+            <button type="button">Button</button>
+        </p>
+        <p>
+            <input type="image" src="images/send.png" alt="" width="32" value="Send" />
+        </p>
+    </form>
+    <form action="">
+        <!-- Если элементу input не задан атрибут type, или браузер не поддерживает какое-либо значение атрибута type, отображаться элемент будет как текстовое поле. -->
+        <p>
+            <label for="ld">month and date</label>
+            <input type="datetime-local" id="ld" name="localdate" />
+        </p>
+        <p>
+            <label for="dt">date and time</label>
+            <input type="datetime" id="dt" name="datetime" />
+        </p>
+        <p>
+            <label for="date">data</label>
+            <input type="date" id="d" name="date" />
+        </p>
+        <p>
+            <label for="t">time</label>
+            <input type="time" id="t" name="time" />
+        </p>
+        <p>
+            <label for="m">month</label>
+            <input type="month" id="m" name="month" />
+        </p>
+        <p>
+            <label for="w">this week</label>
+            <input type="week" id="w" name="week" />
+        </p>
+    </form>
+    <br />
+
+    <h3>Elements for entering numbers with slider</h3>
+    <form>
+        <p>
+            <!-- 
+        input с типом  number позволяет вводить числа. s
+        Имеет следующие атрибуты: 
+            - min       - минимально допустимое значение.
+            - max       - максимально допустимое значение.
+            - readonly  - доступно только для чтения.
+            - required  - указывает, что данное поле обязательно должно иметь значение.
+            - step      - значение, на которое будет увеличиваться число в поле.
+            - value     - значение по умолчанию.
+            -->
+            <label for="number">Number field:</label>
+            <input type="number" min="10" max="100" step="5" value="15" id="number" />
+        </p>
+        <p>
+            <input type="text" list="price" />
+            <datalist id="price">
+                <option value="10" />
+                <option value="100" />
+                <option value="1000" />
+                <option value="10000" />
+                <option value="100000" />
+            </datalist>
+        </p>
+        <p>
+            <label for="slider">Slider</label>
+            <input type="range" step="1" min="0" max="10" id="slider" name="slider" />
+        </p>
+    </form>
+    <br />
+
+    <h3>Items for entering color, phone, mailing address and web address</h3>
+    <form>
+        <p>
+            <label for="favcolor">Color:</label>
+            <input type="color" id="favcolor" name="favcolor" />
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="user@gmail.com" id="email" name="email" />
+        </p>
+        <p>
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" />
+        </p>
+        <p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" placeholder="(XXX)-XXX-XXXX" id="phone" name="phone" />
+        </p>
+        <input type="submit" />
+    </form>
+    <form>
+        <fieldset>
+            <legend>An example of creating drop-down and multi-valued lists</legend>
+            <p>
+                <label for="phone">Select model:</label>
+                <select id="phone" name="phone">
+                    <option value="iphone 6s">iPhone 6S</option>
+                    <option value="lumia 950">Lumia 950</option>
+                    <option value="nexus 5x">Nexus 5X</option>
+                    <option value="galaxy s7">Galaxy S7</option>
+                </select>
+            </p>
+            <p>
+                <label for="phone">Select model:</label>
+                <select id="phone" name="phone">
+                    <option disabled selected>Select model</option>
+                    <option value="iphone 6s">iPhone 6S</option>
+                    <option value="lumia 950">Lumia 950</option>
+                    <option value="nexus 5x">Nexus 5X</option>
+                </select>
+            </p>
+            <p>
+                <!-- Задав атрибут multiple, в выпадающем списке можно выбрать несколько элементов. -->
+                <label for="phone">Select model:</label>
+                <select multiple id="phone" name="phone">
+                    <option value="iphone 6s">iPhone 6S</option>
+                    <option value="lumia 950">Lumia 950</option>
+                    <option value="nexus 5x">Nexus 5X</option>
+                    <option value="galaxy s7">Galaxy S7</option>
+                </select>
+            </p>
+            <p>
+                <!-- Элементы выпадающего списка можно сгруппировать, поместив группу тегов option внутрь тега optgroup -->
+                <label for="phone">Select model:</label>
+                <select id="phone" name="phone">
+                    <optgroup label="Apple">
+                        <option value="iphone 6s">iPhone 6S</option>
+                        <option value="iphone 6s plus">iPhone 6S Plus</option>
+                        <option value="iphone 5se">iPhone 5SE</option>
+                    </optgroup>
+                    <optgroup label="Microsoft">
+                        <option value="lumia 950">Lumia 950</option>
+                        <option value="lumia 950 xl">Lumia 950 XL</option>
+                        <option value="lumia 650">Lumia 650</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+        <p>
+            <!-- Тег textarea позволяет создать многострочное поле для ввода текста. С помощью атрибута cols и rows можно задать количество строк и столбцов. -->
+            <label for="comment">Leave comment:</label><br />
+            <textarea id="comment" name="comment" placeholder="Write comments here" cols="50" rows="4"></textarea>
+        </p>
+    </form>
+    <!-- 
+      Для валидации (проверки на правильность заполнения полей и элементов формы) используется ряд атрибутов:
+            - required  - требует обязательного ввода значения.
+            - min и max - минимально и максимально допустимые значения.
+            - pattern   - задает шаблон, которому должны соответствовать вводимые данные.
+      -->
+    <form novalidate>
+        <p>
+            <label for="login">Login:</label>
+            <input type="text" name="login" id="login" required />
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required />
+        </p>
+        <p>
+            <label for="age">How old are you:</label>
+            <input type="number" name="age" id="age" value="18" min="1" max="100" />
+        </p>
+        <p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" name="phone" id="phone" placeholder="555-55555" pattern="\d{3}-\d{5}" />
+        </p>
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+    </form>
+</body>
+
+</html>
